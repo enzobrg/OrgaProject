@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="nav-link text-dark fw-bold" href="#">Enzo's App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" aria-current="page" href="{{ path('home_index') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{{ path('shopping_list_index') }}">Liste</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{{ path('note_index') }}">Pense-bête</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{{ path('calendrier') }}">Calendrier</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+        Organisation du quotidien
+      </span>
+        </div>
+    </div>
+</nav>

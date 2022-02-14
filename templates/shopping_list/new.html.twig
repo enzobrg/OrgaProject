@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ShoppingList{% endblock %}
+
+{% block body %}
+    {% include '_components/_navbar.html.twig' %}
+    <h1 class="m-3">Ajouter un nouvel élément</h1>
+
+    <div class="m-3">
+    {{ include('shopping_list/_form.html.twig') }}
+    </div>
+
+    <a href="{{ path('shopping_list_index') }}" class="nav-link text-black btn btn-color fw-bold m-2">Retour à la ShoppingList</a>
+
+{% endblock %}

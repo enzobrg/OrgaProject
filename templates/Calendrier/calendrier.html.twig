@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calendrier{% endblock %}
+
+{% block body %}
+    {% include '_components/_navbar.html.twig' %}
+    <a href="{{ path('task_new') }}" class="btn btn-color fw-bold m-3">Ajouter un évènement ?</a>
+    <div class="d-flex flex-wrap justify-content-around">
+    {% for month in months %}
+        <h2 class="text-black col-2 m-5 fs-3">{{ month.name }} :</h2>
+        {% endfor %}
+    </div>
+{% endblock %}
+

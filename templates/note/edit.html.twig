@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Note{% endblock %}
+
+{% block body %}
+    {% include '_components/_navbar.html.twig'%}
+    <h1 class="m-3">Mettre à jour les Notes</h1>
+
+    <div class="m_3">
+    {{ include('note/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('note/_delete_form.html.twig') }}
+    </div>
+
+    <a href="{{ path('note_index') }}" class="nav-link text-black btn btn-color fw-bold m-3">Retour au Pense-bête</a>
+{% endblock %}

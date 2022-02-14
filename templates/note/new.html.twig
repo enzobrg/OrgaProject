@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Note{% endblock %}
+
+{% block body %}
+    {% include '_components/_navbar.html.twig' %}
+    <h1 class="m-3">Ajouter une nouvelle Note</h1>
+
+    <div class="m-3">
+    {{ include('note/_form.html.twig') }}
+    </div>
+
+    <a href="{{ path('note_index') }}" class="nav-link text-black btn btn-color fw-bold m-3">Retour au Pense-bête</a>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ShoppingList{% endblock %}
+
+{% block body %}
+    {% include '_components/_navbar.html.twig' %}
+    <h1 class="m-3">Mettre à jour la ShoppingList</h1>
+
+    <div class="m-3">
+    {{ include('shopping_list/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('shopping_list/_delete_form.html.twig') }}
+    </div>
+
+    <a href="{{ path('shopping_list_index') }}" class="nav-link text-black btn btn-color fw-bold m-3">Retour à la ShoppingList</a>
+{% endblock %}

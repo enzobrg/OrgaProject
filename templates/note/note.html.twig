@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notes{% endblock %}
+
+{% block body %}
+    {% include '_components/_navbar.html.twig' %}
+    <div class="m-3">
+        <a href="{{ path('note_new') }}" class="btn btn-color fw-bold">Ajouter un élément ?</a>
+    </div>
+
+    <div class="container">
+        <div class="container-primary rounded shadow">
+            <div class="row justify-content-center mb-5 mt-5">
+                <div class="col-md-8 text-center mt-2">
+                    <h1 class="heading fs-3 fw-bold color-primary">Pense-bête</h1>
+                </div>
+                {% for note in notes %}
+                    <div class="d-flex flex-wrap">
+                        <p class="text-black m-2"> - {{ note.name }} <a href="{{ path('note_edit', {id: note.id}) }}" class="text-black fw-bold"><i class="fas fa-pen"></i></a></p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
